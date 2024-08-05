@@ -46,6 +46,33 @@ blockquote, q {
 		content: none;
 	}
 
+
+	.icon-button {
+		width: 150px; /* Adjust size as needed */
+		height: auto;
+		transition: transform 0.3s ease;
+	}
+	
+	.icon-button:hover {
+		transform: scale(1.1); /* Scale up slightly on hover */
+	}
+	
+	.actions.special {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		gap: 20px; /* Space between the icons */
+	}
+	
+	.actions.special li {
+		display: inline-block;
+	}
+
+	.actions.special a {
+		text-decoration: none; /* Remove underline from links */
+	}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -145,6 +172,7 @@ input, select, textarea {
 		border-bottom: dotted 1px;
 		color: inherit;
 		text-decoration: none;
+		border-bottom-color: transparent;
 	}
 
 		a:hover {
@@ -2105,6 +2133,14 @@ input, select, textarea {
 			display: block;
 		}
 
+		.image-content {
+			display: flex;
+			align-items: center;
+			background: #000000;
+			padding: 1em;
+			border-radius: 8px;
+		}
+
 		.image.left {
 			float: left;
 			margin: 0 2em 2em 0;
@@ -2133,6 +2169,18 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+			}
+			.image-content img[alt="Python"], 
+			.image-content img[alt="Raspberry Pi"], 
+			.image-content img[alt="Fusion 360"], 
+			.image-content img[alt="Other Technology"],
+			.image-content img[alt="React_Native"],
+			.image-content img[alt="Django"],
+			.image-content img[alt="expo"],
+			.image-content img[alt="Arduino"]{
+				width: 24px; /* Adjust as needed */
+				height: 24px; /* Adjust as needed */
+				margin-left: 0.5em;
 			}
 
 /* List */
@@ -2824,7 +2872,7 @@ input, select, textarea {
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
-				color: #ffffff;
+				color: white;
 			}
 
 			.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
@@ -2859,19 +2907,59 @@ input, select, textarea {
 				text-align: center;
 			}
 			
-			/* Multicolored underline */
+			/* Multicolored ovals */
 			.underline {
+				position: relative;
+				display: inline-block;
+				height: 0.5em; /* Adjust as needed */
+			}
+			
+			.oval {
 				position: absolute;
-				bottom: 25px;
-				left: 0;
-				width: 100%;
-				height: 5px;
-				background: linear-gradient(90deg, #DC3838 0%, #DC3838 70%, #0A66C2 70%, #0A66C2 85%, #1D4E6B 85%, #1D4E6B 100%);
-				content: '';
+				bottom: -.8em; /* Adjust as needed to position below the text */
+				height: 0.3em; /* Adjust as needed for oval height */
+				border-radius: 10px; /* Makes the shapes oval */
+			}
+			
+			.oval.red {
+				left: -7.3em; /* Adjust as needed */
+				background-color: #DC3838; /* Color for the first oval */
+				width: 5em; /* Adjust as needed for oval width */
+			}
+			.oval.red2 {
+				left: -6.3em; /* Adjust as needed */
+				background-color: #DC3838; /* Color for the first oval */
+				width: 3.6em; /* Adjust as needed for oval width */
+			}
+			
+			.oval.blue {
+				left: 50%; /* Adjust to center */
+				transform: translateX(-210%);
+				background-color: #0A66C2; /* Color for the second oval */
+				width: 1em; /* Adjust as needed for oval width */
+			}
+			
+			.oval.green {
+				right: 0em; /* Adjust as needed */
+				background-color: #1D4E6B; /* Color for the third oval */
+				width: 1em; /* Adjust as needed for oval width */
+			}
+
+			.oval.blue2 {
+				left: 50%; /* Adjust to center */
+				transform: translateX(-250%);
+				background-color: #0A66C2; /* Color for the second oval */
+				width: 1em; /* Adjust as needed for oval width */
+			}
+			
+			.oval.green2 {
+				right: .35em; /* Adjust as needed */
+				background-color: #1D4E6B; /* Color for the third oval */
+				width: 1em; /* Adjust as needed for oval width */
 			}
 
 			.wrapper.style1 header.major p {
-				color: #c8ece9;
+				color: white;
 			}
 
 			.wrapper.style1 label {
@@ -3361,6 +3449,89 @@ input, select, textarea {
 			width: 100%;
 			z-index: 10001;
 		}
+
+	#projects {
+    background: #000000; /* Adjust as needed */
+    color: #fff;
+    padding: 2em 0;
+}
+
+.project {
+    margin-bottom: 2em;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.project-content img {
+    max-width: 150px; /* Adjust as needed */
+    margin-right: 1em;
+    border-radius: 8px;
+}
+
+.project-content p {
+    flex: 1;
+    margin: 0;
+}
+
+.project-content strong {
+    display: block;
+    margin-top: 1em;
+}
+
+.project-content img[alt="Python"], 
+.project-content img[alt="Raspberry Pi"], 
+.project-content img[alt="Fusion 360"], 
+.project-content img[alt="Other Technology"],
+.project-content img[alt="React_Native"],
+.project-content img[alt="Django"],
+.project-content img[alt="expo"],
+.project-content img[alt="Arduino"]{
+    width: 24px; /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
+    margin-left: 0.5em;
+}
+
+#projects2 {
+    background: #000000; /* Adjust as needed */
+    color: #fff;
+    padding: 2em 0;
+}
+
+.project2 {
+    margin-bottom: 2em;
+}
+
+.project2-content img {
+    max-width: 800px; /* Adjust as needed */
+	max-height: 1000px;
+    margin-right: 1em;
+    border-radius: 8px;
+}
+
+a.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5a5f; /* Change to your preferred color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.download-btn:hover {
+    background-color: #e04e50; /* Darken the button on hover */
+}
 
 	#menu {
 		-moz-transform: translateX(20em);
@@ -4020,4 +4191,53 @@ input, select, textarea {
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
+	}
+
+	#projects {
+		background: black; /* Adjust as needed */
+		color: #fff;
+		padding: 2em 0;
+	}
+	
+	.project {
+		margin-bottom: 2em;
+	}
+	
+	.project h3 {
+		font-size: 1.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.project-content {
+		display: flex;
+		align-items: center;
+		background: #222;
+		padding: 1em;
+		border-radius: 8px;
+	}
+	
+	.project-content img {
+		max-width: 350px; /* Adjust as needed */
+		max-height: 250px; /* Adjust as needed */
+		margin-right: 1em;
+		border-radius: 8px;
+	}
+	
+	.project-content p {
+		flex: 1;
+		margin: 0;
+	}
+	
+	.project-content strong {
+		display: block;
+		margin-top: 1em;
+	}
+	
+	.project-content img[alt="Python"], 
+	.project-content img[alt="Raspberry Pi"], 
+	.project-content img[alt="Fusion 360"], 
+	.project-content img[alt="Other Technology"] {
+		width: 24px; /* Adjust as needed */
+		height: 24px; /* Adjust as needed */
+		margin-left: 0.5em;
 	}
