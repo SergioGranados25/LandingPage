@@ -3513,7 +3513,7 @@ input, select, textarea {
 }
 
 .project2-content img {
-    max-width: 800px; /* Adjust as needed */
+    max-width: 100em; /* Adjust as needed */
 	max-height: 1000px;
     margin-right: 1em;
     border-radius: 8px;
